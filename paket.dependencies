@@ -1,0 +1,15 @@
+source https://api.nuget.org/v3/index.json
+
+framework: netstandard20, netcore20
+
+nuget FAKE
+nuget FSharp.Core
+nuget Microsoft.AspNetCore.All
+nuget Fable.JsonConverter
+nuget Giraffe
+nuget Serilog
+nuget Serilog.Sinks.Literate
+nuget Serilog.Settings.Configuration
+nuget Serilog.Extensions.Logging
+nuget Serilog.Enrichers.Thread
+nuget Serilog.Enrichers.Process

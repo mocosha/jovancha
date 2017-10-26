@@ -1,0 +1,10 @@
+FSharp.Core
+Microsoft.AspNetCore.All
+Fable.JsonConverter
+Giraffe
+Serilog
+Serilog.Sinks.Literate
+Serilog.Settings.Configuration
+Serilog.Extensions.Logging
+Serilog.Enrichers.Thread
+Serilog.Enrichers.Process

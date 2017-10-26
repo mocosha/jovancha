@@ -1,0 +1,27 @@
+{
+    "Serilog": {
+        "Using": [
+            "Serilog.Sinks.Literate"
+        ],
+        "MinimumLevel": {
+            "Default": "Debug",
+            "Override": {
+                "Microsoft": "Warning",
+                "System": "Warning"
+            }
+        },
+        "WriteTo": [
+            {
+                "Name": "LiterateConsole",
+                "Args": {
+                    "outputTemplate": "[{Timestamp:HH:mm:ss} {Level:u3}] {SourceContext} {Message:l}{NewLine}{Exception}"
+                }
+            }
+        ],
+        "Enrich": [
+            "FromLogContext",
+            "WithMachineName",
+            "WithThreadId"
+        ]
+    }
+}
