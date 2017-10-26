@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FA980B66-940
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "jovancha", "src\jovancha\jovancha.fsproj", "{859FE6C6-560F-4A08-8F01-EA3A20F2B003}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{80D6F0E2-5085-4AD7-9F2A-859629381B9B}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "jovancha.test", "test\jovancha.test\jovancha.test.fsproj", "{807D3B4D-E4A0-4486-9204-33F35287AE7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,8 +36,21 @@ Global
 		{859FE6C6-560F-4A08-8F01-EA3A20F2B003}.Release|x64.Build.0 = Release|x64
 		{859FE6C6-560F-4A08-8F01-EA3A20F2B003}.Release|x86.ActiveCfg = Release|x86
 		{859FE6C6-560F-4A08-8F01-EA3A20F2B003}.Release|x86.Build.0 = Release|x86
+		{807D3B4D-E4A0-4486-9204-33F35287AE7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{807D3B4D-E4A0-4486-9204-33F35287AE7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{807D3B4D-E4A0-4486-9204-33F35287AE7B}.Debug|x64.ActiveCfg = Debug|x64
+		{807D3B4D-E4A0-4486-9204-33F35287AE7B}.Debug|x64.Build.0 = Debug|x64
+		{807D3B4D-E4A0-4486-9204-33F35287AE7B}.Debug|x86.ActiveCfg = Debug|x86
+		{807D3B4D-E4A0-4486-9204-33F35287AE7B}.Debug|x86.Build.0 = Debug|x86
+		{807D3B4D-E4A0-4486-9204-33F35287AE7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{807D3B4D-E4A0-4486-9204-33F35287AE7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{807D3B4D-E4A0-4486-9204-33F35287AE7B}.Release|x64.ActiveCfg = Release|x64
+		{807D3B4D-E4A0-4486-9204-33F35287AE7B}.Release|x64.Build.0 = Release|x64
+		{807D3B4D-E4A0-4486-9204-33F35287AE7B}.Release|x86.ActiveCfg = Release|x86
+		{807D3B4D-E4A0-4486-9204-33F35287AE7B}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{859FE6C6-560F-4A08-8F01-EA3A20F2B003} = {FA980B66-940D-4711-96BA-DF6AB6385DE6}
+		{807D3B4D-E4A0-4486-9204-33F35287AE7B} = {80D6F0E2-5085-4AD7-9F2A-859629381B9B}
 	EndGlobalSection
 EndGlobal

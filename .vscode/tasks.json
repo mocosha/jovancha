@@ -1,0 +1,40 @@
+{
+    "version": "0.1.0",
+    "command": "dotnet",
+    "isShellCommand": true,
+    "args": [],
+    "tasks": [
+        {
+            "taskName": "restore packages",
+            "suppressTaskName": true,
+            "args": [
+                "restore",
+                "${workspaceRoot}/jovancha.sln"
+            ],
+            "isBuildCommand": false,
+            "showOutput": "silent"
+        },
+        {
+            "taskName": "build jovancha",
+            "suppressTaskName": true,
+            "args": [
+                "build",
+                "${workspaceRoot}/src/jovancha/jovancha.fsproj",
+                "--no-restore"
+            ],
+            "isBuildCommand": false,
+            "showOutput": "silent"
+        },
+        {
+            "taskName": "test jovancha",
+            "suppressTaskName": true,
+            "args": [
+                "test",
+                "${workspaceRoot}/test/jovancha.test/jovancha.test.fsproj",
+                "--no-restore"
+            ],
+            "isBuildCommand": false,
+            "showOutput": "silent"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+FSharp.Core
+xunit
+xunit.runner.visualstudio
+FsCheck
+FsCheck.Xunit
+Microsoft.AspNetCore.All
+Microsoft.AspNetCore.TestHost
+Microsoft.NET.Test.Sdk
+Microsoft.Extensions.Configuration
+Microsoft.Extensions.Configuration.Json

@@ -13,3 +13,9 @@ nuget Serilog.Settings.Configuration
 nuget Serilog.Extensions.Logging
 nuget Serilog.Enrichers.Thread
 nuget Serilog.Enrichers.Process
+nuget xunit
+nuget xunit.runner.visualstudio version_in_path: true
+nuget FsCheck
+nuget FsCheck.Xunit
+nuget Microsoft.NET.Test.Sdk
+nuget Microsoft.AspNetCore.TestHost
