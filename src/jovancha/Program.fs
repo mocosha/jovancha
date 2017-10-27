@@ -74,10 +74,9 @@ module Program =
             let forwardOptions = ForwardedHeadersOptions ()
             forwardOptions.ForwardedHeaders <- ForwardedHeaders.XForwardedFor ||| ForwardedHeaders.XForwardedProto
 
-            app.UseForwardedHeaders(forwardOptions)
-                .UseGiraffe(composeApp jovancha)
-
+            app.UseForwardedHeaders (forwardOptions) |> ignore
             app.UseGiraffeErrorHandler (unhandledError)
+            app.UseGiraffe (composeApp jovancha)
 
         member __.ConfigureServices (services: IServiceCollection) =
             services
