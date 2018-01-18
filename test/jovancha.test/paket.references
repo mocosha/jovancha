@@ -8,3 +8,4 @@ Microsoft.AspNetCore.TestHost
 Microsoft.NET.Test.Sdk
 Microsoft.Extensions.Configuration
 Microsoft.Extensions.Configuration.Json
+Unquote

@@ -10,6 +10,7 @@ module Hello =
     open Xunit
     open FsCheck
     open FsCheck.Xunit
+    open Swensen.Unquote
     open Jovancha
     open Jovancha.Program
 
@@ -17,12 +18,6 @@ module Hello =
 
     let fakeJovancha =
         { sayHello = fun _ -> fakeHello }
-
-    let (=!) actual expected =
-        if actual <> expected then
-            let actual = sprintf "%A" actual
-            let expected = sprintf "%A" expected
-            Assert.StrictEqual (expected, actual)
 
     module TestData =
 
@@ -46,6 +41,7 @@ module Hello =
                 |> Gen.filter (fun s ->
                     not (s.StartsWith("?"))
                     && s <> "/"
+                    && s <> "." // equivalent of "/"
                     && Uri.IsWellFormedUriString (s, UriKind.Relative))
                 |> Gen.map (fun s -> Uri (s, UriKind.Relative))
                 |> Arb.fromGen
@@ -78,7 +74,7 @@ module Hello =
             response.StatusCode =! HttpStatusCode.OK
             fakeHello =! result
 
-        [<Property(Arbitrary=[|typeof<TestData.NonEmptyRouteGen>|])>]
+        [<Property(Arbitrary=[|typeof<TestData.NonEmptyRouteGen>|], MaxTest=1000)>]
         member __.``when GET any route except / it should return 404`` (route: Uri) =
             let response = client.GetAsync(route).Result
             response.StatusCode =! HttpStatusCode.NotFound
