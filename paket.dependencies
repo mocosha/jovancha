@@ -19,3 +19,4 @@ nuget FsCheck
 nuget FsCheck.Xunit
 nuget Microsoft.NET.Test.Sdk
 nuget Microsoft.AspNetCore.TestHost
+nuget Unquote
