@@ -1,5 +1,7 @@
 # jovancha - the most famous giraffe :)
 
+[![Build Status](https://travis-ci.org/mocosha/jovancha.svg?branch=master)](https://travis-ci.org/mocosha/jovancha.svg)
+
 This is sample demo of using [Giraffe](https://github.com/dustinmoris/Giraffe), a native functional ASP.NET Core web framework for F# developers.
 
 ## Build process
