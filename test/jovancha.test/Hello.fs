@@ -45,7 +45,7 @@ module Hello =
                 |> Gen.map (fun s -> s.Get)
                 |> Gen.filter (fun s ->
                     not (s.StartsWith("?"))
-                    && s <> "/"
+                    && (List.forall ((<>) s) ["."; "/"])
                     && Uri.IsWellFormedUriString (s, UriKind.Relative))
                 |> Gen.map (fun s -> Uri (s, UriKind.Relative))
                 |> Arb.fromGen
