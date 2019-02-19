@@ -1,10 +1,10 @@
 source https://api.nuget.org/v3/index.json
 
-framework: netstandard20, netcore20
+framework: netstandard20, netcore22
 
 nuget FAKE
 nuget FSharp.Core
-nuget Microsoft.AspNetCore.All
+nuget Microsoft.AspNetCore.App
 nuget Fable.JsonConverter
 nuget Giraffe
 nuget Serilog
