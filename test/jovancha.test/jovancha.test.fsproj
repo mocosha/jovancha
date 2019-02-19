@@ -3,12 +3,13 @@
   <PropertyGroup>
     <AssemblyTitle>jovanocha.test</AssemblyTitle>
     <AssemblyName>jovancha.test</AssemblyName>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
     <DebugType>portable</DebugType>
-    <OutputType>Exe</OutputType>
-    <Version>1.0.0-alpha</Version>
+    <Version>1.0.0</Version>
+    <EmitEntryPoint>false</EmitEntryPoint>
     <Authors>mocosha Inc.</Authors>
     <Copyright>mocosha Inc.</Copyright>
+    <IsTestProject>true</IsTestProject>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -20,12 +21,8 @@
     <Content Include="logsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="**/*.resx" />
   </ItemGroup>
   <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
-  </ItemGroup>
-<ItemGroup>
     <ProjectReference Include="../../src/jovancha/jovancha.fsproj" />
   </ItemGroup>
   <Import Project="..\..\assets\appsettings.targets" />
