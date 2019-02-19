@@ -8,8 +8,7 @@ module Program =
     open Microsoft.Extensions.DependencyInjection
     open Microsoft.AspNetCore.HttpOverrides
     open Serilog
-    open Giraffe.HttpHandlers
-    open Giraffe.Middleware
+    open Giraffe
 
     type Jovancha =
         { sayHello: unit -> string }
@@ -61,8 +60,6 @@ module Program =
         member __.Configure (app: IApplicationBuilder)
                             (loggerFactory: ILoggerFactory)
                             (jovancha: Jovancha) =
-
-            Json.applyGlobalJsonSettings ()
             loggerFactory.AddSerilog (Log.Logger) |> ignore
 
             app.UseCors (fun b ->

@@ -1,5 +1,5 @@
 FSharp.Core
-Microsoft.AspNetCore.All
+Microsoft.AspNetCore.App
 Fable.JsonConverter
 Giraffe
 Serilog
